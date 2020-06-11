@@ -1,5 +1,6 @@
 # Import modules
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 import config
 
 # Instantiate driver
@@ -29,5 +30,9 @@ attendance_url = 'https://ga-garnet-production.herokuapp.com/memberships/3058'
 browser.get(attendance_url)
 
 # Check in automatically
-check_in_button = browser.find_element_by_tag_name('button')
-check_in_button.click()
+try:
+    check_in_button = browser.find_element_by_tag_name('button')
+    check_in_button.click()
+    print('Successfully checked in!')
+except NoSuchElementException:
+    print('Unable to find check in button.')
