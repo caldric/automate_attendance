@@ -30,13 +30,13 @@ if 'github.com' in browser.current_url:
 attendance_url = 'https://ga-garnet-production.herokuapp.com/memberships/3058'
 browser.get(attendance_url)
 
-# Check in automatically
+# Check in automatically (if button is present)
 try:
     check_in_button = browser.find_element_by_tag_name('button')
     check_in_button.click()
     print('Successfully checked in!')
 except NoSuchElementException:
-    print('Unable to find check in button.')
+    print('Unable to find check-in button.')
 
 # Quit browser afterwards
 sleep(10)
