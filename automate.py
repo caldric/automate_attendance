@@ -27,3 +27,7 @@ if 'github.com' in browser.current_url:
 # Go to attendance page
 attendance_url = 'https://ga-garnet-production.herokuapp.com/memberships/3058'
 browser.get(attendance_url)
+
+# Check in automatically
+check_in_button = browser.find_element_by_tag_name('button')
+check_in_button.click()
