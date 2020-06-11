@@ -1,4 +1,5 @@
 # Import modules
+from time import sleep
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import config
@@ -36,3 +37,7 @@ try:
     print('Successfully checked in!')
 except NoSuchElementException:
     print('Unable to find check in button.')
+
+# Quit browser afterwards
+sleep(10)
+browser.quit()
