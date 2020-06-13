@@ -1,2 +1,4 @@
 config.py
 _*
+*.swp
+*.app
