@@ -1,4 +1,5 @@
 # Import modules
+from datetime import datetime as dt, timedelta
 from time import sleep
 from random import randint
 from selenium import webdriver
@@ -7,9 +8,13 @@ import config
 
 # Wait a random number of seconds
 max_mins = 10
-max_secs = 60 * max_mins
-random_secs = randint(max_secs)
-sleep(random_secs)
+max_seconds = 60 * max_mins
+random_seconds = randint(max_seconds)
+current_datetime = dt.now()
+start_datetime = current_datetime + timedelta(seconds=random_seconds)
+print(f'Current datetime: {current_datetime}')
+print(f'Start datetime: {start_datetime}')
+sleep(random_seconds)
 
 # Instantiate driver
 driver_path = '/usr/local/bin/chromedriver'
