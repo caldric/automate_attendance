@@ -9,7 +9,7 @@ import config
 # Wait a random number of seconds
 max_mins = 10
 max_seconds = 60 * max_mins
-random_seconds = randint(max_seconds)
+random_seconds = randint(0, max_seconds)
 current_datetime = dt.now()
 start_datetime = current_datetime + timedelta(seconds=random_seconds)
 print(f'Current datetime: {current_datetime}')
