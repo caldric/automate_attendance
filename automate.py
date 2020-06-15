@@ -1,8 +1,15 @@
 # Import modules
 from time import sleep
+from random import randint
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import config
+
+# Wait a random number of seconds
+max_mins = 10
+max_secs = 60 * max_mins
+random_secs = randint(max_secs)
+sleep(random_secs)
 
 # Instantiate driver
 driver_path = '/usr/local/bin/chromedriver'
