@@ -7,7 +7,7 @@ from selenium.common.exceptions import NoSuchElementException
 import config
 
 # Wait a random number of seconds
-max_mins = 10
+max_mins = 5
 max_seconds = 60 * max_mins
 random_seconds = randint(0, max_seconds)
 current_datetime = dt.now()
